@@ -8,3 +8,6 @@ const DepartementSchema = new mongoose.Schema({
     name:{type:String , required:true},
     description:{type:String, required:true},
 })
+
+const Departement = mongoose.model('Departement', DepartementSchema);
+export default Departement;

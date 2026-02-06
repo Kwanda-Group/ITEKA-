@@ -1,9 +1,11 @@
 import mongoose from 'mongoose';
+import Branch from './Branches';
 
 // create the services schema
 const ServiceSchema = new mongoose.Schema({
     institution_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Instutition', required: true },
     departement_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Departement' },
+    branch: { type: mongoose.Schema.Types.ObjectId, ref: 'Branch' }, 
     name:{type:String , required:true},
     description:{type:String, required:true},
     duration_minutes:{type:String, required:true},
