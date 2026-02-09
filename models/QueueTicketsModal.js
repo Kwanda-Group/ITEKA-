@@ -8,3 +8,6 @@ const QueueTicketsSchema = new mongoose.Schema({
     status: { type: String, enum: ['waiting', 'serving','completed' ,'no_show'], default: 'waiting', required: true },
     
 })
+
+const QueueTicket = mongoose.model("QueueTickets" , QueueTicketsSchema);
+export default QueueTicket;

@@ -8,3 +8,8 @@ const StaffAssignmentsSchema = new mongoose.Schema({
     branch_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Branch' },
     department_id:{type: mongoose.Schema.Types.ObjectId, ref: 'Departement' , required:true },
 })
+
+
+const StaffAssignments = mongoose.model("Assignments" , StaffAssignmentsSchema);
+
+export default StaffAssignments;

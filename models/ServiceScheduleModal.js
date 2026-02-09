@@ -11,3 +11,6 @@ const ServiceScheduleSchema = new mongoose.Schema({
     status:{type:String, enum:['active' , 'done'], default:'active', required:true},
     createdAt :{type:Date, default:Date.now},
 });
+
+const Schedule = mongoose.model("Schedule" , ServiceScheduleSchema);
+export default Schedule;
